@@ -1,8 +1,8 @@
 // server.js
-import jsonServer from 'json-server';
+const jsonServer = require('json-server');
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
-const middlewares = jsonServer.defaults({ static: '' }); // disable serving /public
+const middlewares = jsonServer.defaults({ static: '' }); // disable serving public/
 
 server.use(middlewares);
 server.use(router);
